@@ -22,7 +22,7 @@ export function SkillCard({skill, ...rest}: SkillCardProps) {
 const styles = StyleSheet.create({
   buttonSkill: {
     backgroundColor: '#1F1E25',
-    padding: Platform.OS == 'ios' ? 15 : 10,
+    padding: Platform.OS === 'ios' ? 15 : 10,
     borderRadius: 50,
     alignItems: 'center',
     marginVertical: 10,
