@@ -22,7 +22,7 @@ export function Home() {
   const [gretting, setGretting] = useState('');
 
   function handleAddNewSkill() {
-    if (newSkill != '') {
+    if (newSkill !== '') {
       const filterSkill = mySkills.filter(x => x.name === newSkill);
 
       if (filterSkill.length == 0) {
@@ -72,7 +72,10 @@ export function Home() {
       <Button title="Add" onPress={handleAddNewSkill} />
 
       <Text
-        style={[styles.title, {marginVertical: Platform.OS == 'ios' ? 50 : 35}]}
+        style={[
+          styles.title,
+          {marginVertical: Platform.OS === 'ios' ? 50 : 35},
+        ]}
       >
         My Skills
       </Text>
@@ -108,7 +111,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#121015',
-    paddingVertical: Platform.OS == 'ios' ? 70 : 40,
+    paddingVertical: Platform.OS === 'ios' ? 70 : 40,
     paddingHorizontal: 30,
   },
 
