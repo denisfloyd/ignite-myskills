@@ -25,7 +25,7 @@ export function Home() {
     if (newSkill !== '') {
       const filterSkill = mySkills.filter(x => x.name === newSkill);
 
-      if (filterSkill.length == 0) {
+      if (filterSkill.length === 0) {
         const newData = {
           id: String(new Date().getTime()),
           name: newSkill,
